@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX Get Data</title>
+	
+<!-- 	
+	การส่งข้อมูลด้วย ajax เเบบ get คือ
+	ส่งข้อมูลไปประมวลผล เเล้วมันคืนค่ากลับมาเเบบ ajax โดยพื้นฐานเเล้ว
+	.ajax() จะรับส่งกันเเบบ get 
+ 	
+ -->
+ <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			$('button').click(function(){
+				$.ajax({
+					url : 'calcAge.php',
+					data : {year:$('input').val()},
+					success : function(data){
+						$('#content').html(data)
+					}
+				})
+			})
+		})
+	</script>
+
+</head>
+<body>
+	Year of birth <input type="text"><button>Get Age!</button>
+	<hr>
+	<span id="content"></span>
+</body>
+</html>

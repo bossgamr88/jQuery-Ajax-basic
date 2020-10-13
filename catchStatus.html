@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX Get Error</title>
+	<script src="jquery-3.5.1.min.js"></script>
+
+<!-- 
+	การดักจับสถานะ หลังจากทำการดักจับ error เเล้ว ก็ยังวิธีการดักจับ
+	สถานะด้วย โดยที่เราคุ้นหู เช่น 404 not found ไม่พบหน้าเพจ ที่เรียกมาเเสดงผล
+
+-->
+	<script>
+	$(function(){
+		$.ajax({
+			url : 'getProductData.php', // ไม่มีไฟล์นี้จริง
+			success : function(data){
+				$('#result').html(data)
+			},
+			statusCode : {
+				404 : function(){
+					$('#result').html('<h1>404 Page not found.</h1>')
+				}
+			}
+		})
+	})
+
+	</script>
+</head>
+<body>
+	<div id="result"></div>
+</body>
+</html>

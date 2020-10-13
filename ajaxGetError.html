@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX Get Error</title>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				// url:'myData2.ph',
+				url:'myData2.php',
+				success : function(data){
+					$('div').html(data)
+				},
+				error : function(req,status,error){
+					$('div').html(status + " " + req.status + " " + error)
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<h1>Get Error</h1>
+	<div style="width: 400px;"></div>
+</body>
+</html>

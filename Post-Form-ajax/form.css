@@ -1,0 +1,23 @@
+body{
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+}
+#title{
+	background: #ffcc00;
+	padding: 3px;
+}
+#titleSuccess{
+	background: #ccff00;
+	padding: 3px;
+}
+h1 {
+	margin: 7px;
+}
+#form{
+	padding: 10px;
+}
+input{
+	font-size: 16px;
+	display: list-item;
+}

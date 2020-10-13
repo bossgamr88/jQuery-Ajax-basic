@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 
+		การใช้งาน jQuery AJAX
+
+		การทำงานของ ajax คือ การรับส่งค่าไปมาหากันได้ โดยที่ไม่ต้องไป refresh หน้าจอ
+
+		ยกตัวอย่าง เช่น อีเมล์ๆที่ใช้กันอยู่ ก็คือ ajax เช่น gmail เป็นต้น
+
+		มันยังช่วยลดภาระการทำงานของ server เพราะ โหลดเฉพาะ เท่าที่อยากรู้
+		ไม่ใช่กด refresh ก็กลายเป็นว่า ต้องโหลดข้อมูลมาใหม่อีกกลายเป็นการทำงานหนักไป
+
+		**หัวข้อ เเรก คือ 
+
+		การโหลดข้อมูลมาเเสดงผลด้วย .load() จะได้เห็นถึงการทำงานที่ไม่ต้อง refresh อะไร
+		มันก็โหลดเข้ามาเเสดงได้
+
+	-->
+	<title>My Data</title>
+	<style>
+		#myColor{
+			width: 100px;
+			height: 100px;
+			border: 1px solid;
+			background: yellow;
+		}
+		p {
+			width: 400px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>What is color ?</h1>
+	<div id="myColor"></div>
+	<p>It is yellow.</p>
+</body>
+</html>
